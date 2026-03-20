@@ -9,10 +9,7 @@
   <p align="center"><strong>+28% net worth · 13 validated skills · 10-day A/B verified</strong></p>
   <p align="center"><em>GDPVal 10-day A/B experiment: self-evolving agent achieves ~28% higher net worth on identical tasks, 13 validated skills, no preset skill set.</em></p>
   <p align="center">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined_light.png">
-      <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B: Self-evolution vs baseline — net worth, income, per-task" width="1000">
-    </picture>
+    <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B: Self-evolution vs baseline — net worth, income, per-task" width="1000">
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/python-≥3.10-blue?logo=python&logoColor=white" alt="Python" />

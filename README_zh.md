@@ -9,10 +9,7 @@
   <p align="center"><strong>+28% 净收益 · 13 条有效技能 · 10 天 A/B 验证</strong></p>
   <p align="center"><em>GDPVal 10 天 A/B 实验：相同任务下自进化 Agent，净收益约 +28%，沉淀 13 条有效技能，无需预设技能库。</em></p>
   <p align="center">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined_light.png">
-      <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B 效果对比：净值、收入、单题报酬" width="1000">
-    </picture>
+    <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B 效果对比：净值、收入、单题报酬" width="1000">
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/python-≥3.10-blue?logo=python&logoColor=white" alt="Python" />
