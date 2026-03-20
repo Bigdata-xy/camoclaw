@@ -1,13 +1,18 @@
 <p align="center">
-  <h1 align="center">SelfEvolvingClaw</h1>
-  <p align="center">
-    <img src="assets/logo.png" alt="SelfEvolvingClaw Logo" width="220" />
-  </p>
+  <table align="center">
+  <tr>
+    <td align="right" style="padding-right: 8px;"><span style="display: inline-block; background: #ffffff; padding: 8px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"><img src="assets/logo.png" alt="SelfEvolvingClaw Logo" width="140" /></span></td>
+    <td align="left"><h1 style="font-size: 2.5em; margin: 0;">SelfEvolvingClaw</h1></td>
+  </tr>
+  </table>
   <p align="center">执行中自造缺失能力 · 无需预设技能集 · 持续变强</p>
   <p align="center"><strong>+28% 净收益 · 13 条有效技能 · 10 天 A/B 验证</strong></p>
-  <p align="center"><em>GDPVal 10 天 A/B 实验：相同任务下自进化 Agent 净收益约 +28%，沉淀 13 条有效技能，无需预设技能库。</em></p>
+  <p align="center"><em>GDPVal 10 天 A/B 实验：相同任务下自进化 Agent，净收益约 +28%，沉淀 13 条有效技能，无需预设技能库。</em></p>
   <p align="center">
-    <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B 效果对比：净值、收入、单题报酬" width="800" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined_light.png">
+      <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B 效果对比：净值、收入、单题报酬" width="1000">
+    </picture>
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/python-≥3.10-blue?logo=python&logoColor=white" alt="Python" />
@@ -81,7 +86,9 @@ GDPVal 数据集 10 天 A/B 实验：**完全相同的任务序列**、相同初
 
 ## 🔄 工作原理
 
-![流程图](assets/Flowchart.png)
+<p align="center">
+  <img src="assets/Flowchart.png" alt="流程图" width="1000">
+</p>
 
 **闭环原则**：仅当技能在 Run2 中被实际使用且带来提升时，才会持久化。避免无效技能堆积。
 

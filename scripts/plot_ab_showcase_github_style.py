@@ -297,12 +297,13 @@ def plot_panel_1_net_worth(
     subtitle: str,
     c: Dict[str, str],
     theme: str = "light",
+    dpi: int = 700,
 ) -> None:
     import matplotlib.pyplot as plt
     from matplotlib import rcParams
 
     _apply_style(rcParams, c, theme)
-    fig, ax = plt.subplots(figsize=(11, 5.5), dpi=300)
+    fig, ax = plt.subplots(figsize=(11, 5.5), dpi=dpi)
     fig.patch.set_facecolor(c["canvas"])
     ax.set_facecolor(c.get("axes_bg", c["canvas"]))
     fig.suptitle("Net worth over simulation days", fontsize=14, fontweight="600", color=c["fg_default"], y=0.98)
@@ -371,7 +372,7 @@ def plot_panel_1_net_worth(
     ax.spines["right"].set_visible(False)
     plt.tight_layout(rect=[0, 0, 1, 0.88])
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"])
+    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"], dpi=dpi)
     plt.close(fig)
 
 
@@ -381,12 +382,13 @@ def plot_panel_2_work_income(
     subtitle: str,
     c: Dict[str, str],
     theme: str = "light",
+    dpi: int = 700,
 ) -> None:
     import matplotlib.pyplot as plt
     from matplotlib import rcParams
 
     _apply_style(rcParams, c, theme)
-    fig, ax = plt.subplots(figsize=(11, 5.5), dpi=300)
+    fig, ax = plt.subplots(figsize=(11, 5.5), dpi=dpi)
     fig.patch.set_facecolor(c["canvas"])
     ax.set_facecolor(c.get("axes_bg", c["canvas"]))
     fig.suptitle("Cumulative work income (from balance rows)", fontsize=14, fontweight="600", color=c["fg_default"], y=0.98)
@@ -454,7 +456,7 @@ def plot_panel_2_work_income(
     ax.spines["right"].set_visible(False)
     plt.tight_layout(rect=[0, 0, 1, 0.88])
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"])
+    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"], dpi=dpi)
     plt.close(fig)
 
 
@@ -464,6 +466,7 @@ def plot_panel_3_per_task(
     subtitle: str,
     c: Dict[str, str],
     theme: str = "light",
+    dpi: int = 700,
 ) -> None:
     import matplotlib.pyplot as plt
     from matplotlib import rcParams
@@ -480,7 +483,7 @@ def plot_panel_3_per_task(
     xa = [i - width / 2 for i in x]
     xb = [i + width / 2 for i in x]
 
-    fig, ax = plt.subplots(figsize=(11, 5.5), dpi=300)
+    fig, ax = plt.subplots(figsize=(11, 5.5), dpi=dpi)
     fig.patch.set_facecolor(c["canvas"])
     ax.set_facecolor(c.get("axes_bg", c["canvas"]))
     fig.suptitle("Per-task payment (same task_id in both runs)", fontsize=14, fontweight="600", color=c["fg_default"], y=0.98)
@@ -537,7 +540,7 @@ def plot_panel_3_per_task(
     ax.spines["right"].set_visible(False)
     plt.tight_layout(rect=[0, 0, 1, 0.88])
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"])
+    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"], dpi=dpi)
     plt.close(fig)
 
 
@@ -547,6 +550,7 @@ def plot_combined_four_panel(
     title: str,
     c: Dict[str, str],
     theme: str = "light",
+    dpi: int = 700,
 ) -> None:
     """Legacy 2×2 figure including summary panel (4)."""
     import matplotlib.pyplot as plt
@@ -554,7 +558,7 @@ def plot_combined_four_panel(
     from matplotlib.patches import FancyBboxPatch
 
     _apply_style(rcParams, c, theme)
-    fig = plt.figure(figsize=(12.5, 7.2), dpi=300)
+    fig = plt.figure(figsize=(12.5, 7.2), dpi=dpi)
     fig.patch.set_facecolor(c["canvas"])
     fig.suptitle(title, fontsize=15, fontweight="600", color=c["fg_default"], y=0.97)
     fig.text(
@@ -781,7 +785,7 @@ def plot_combined_four_panel(
     )
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"])
+    fig.savefig(out_path, bbox_inches="tight", facecolor=c["canvas"], dpi=dpi)
     plt.close(fig)
 
 
@@ -821,6 +825,12 @@ def main() -> int:
         default="github_dark",
         help="github_dark: GitHub dark + contribution green (炫酷); light: plain Primer light",
     )
+    ap.add_argument(
+        "--dpi",
+        type=int,
+        default=700,
+        help="Output DPI for PNG (default 700). Higher = sharper on retina/high-DPI displays.",
+    )
     args = ap.parse_args()
     if args.combined_both_styles and not args.combined_out:
         ap.error("--combined-both-styles requires --combined-out")
@@ -839,9 +849,9 @@ def main() -> int:
     p2 = out_dir / f"{base}_2_cumulative_work_income.png"
     p3 = out_dir / f"{base}_3_per_task_payment.png"
 
-    plot_panel_1_net_worth(data, p1, subtitle, c, theme=theme)
-    plot_panel_2_work_income(data, p2, subtitle, c, theme=theme)
-    plot_panel_3_per_task(data, p3, subtitle, c, theme=theme)
+    plot_panel_1_net_worth(data, p1, subtitle, c, theme=theme, dpi=args.dpi)
+    plot_panel_2_work_income(data, p2, subtitle, c, theme=theme, dpi=args.dpi)
+    plot_panel_3_per_task(data, p3, subtitle, c, theme=theme, dpi=args.dpi)
 
     print(f"Wrote: {p1}")
     print(f"Wrote: {p2}")
@@ -854,12 +864,12 @@ def main() -> int:
             light_path = comb.parent / f"{comb.stem}_light{comb.suffix}"
             c_dark = get_color_palette("github_dark")
             c_light = get_color_palette("light")
-            plot_combined_four_panel(data, dark_path, args.title, c_dark, theme="github_dark")
-            plot_combined_four_panel(data, light_path, args.title, c_light, theme="light")
+            plot_combined_four_panel(data, dark_path, args.title, c_dark, theme="github_dark", dpi=args.dpi)
+            plot_combined_four_panel(data, light_path, args.title, c_light, theme="light", dpi=args.dpi)
             print(f"Wrote (GitHub Dark): {dark_path}")
             print(f"Wrote (light):       {light_path}")
         else:
-            plot_combined_four_panel(data, comb, args.title, c, theme=theme)
+            plot_combined_four_panel(data, comb, args.title, c, theme=theme, dpi=args.dpi)
             print(f"Wrote: {comb}")
 
     return 0

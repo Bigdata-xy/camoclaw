@@ -120,7 +120,7 @@ Extract per working day:
 - Work income
 - (Group A only) Evolution trigger dates (from terminal/activity logs)
 
-Use `scripts/plot_ab_showcase_github_style.py` to generate A/B comparison figures. Example:
+Use `scripts/plot_ab_showcase_github_style.py` to generate A/B comparison figures. Default DPI is 700 for sharp display on retina/high-DPI screens. For the README 4-in-1 figure to display well in both light and dark mode, run with `--combined-out` and `--combined-both-styles` to produce both dark and light variants. Use `--dpi 800` or higher for even crisper output. Example:
 
 <p align="center">
   <img src="figures/showcase_ab_github_style_1_net_worth.png" alt="Net worth curve" width="280" />

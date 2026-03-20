@@ -1,13 +1,18 @@
 <p align="center">
-  <h1 align="center">SelfEvolvingClaw</h1>
-  <p align="center">
-    <img src="assets/logo.png" alt="SelfEvolvingClaw Logo" width="220" />
-  </p>
+  <table align="center">
+  <tr>
+    <td align="right" style="padding-right: 8px;"><span style="display: inline-block; background: #ffffff; padding: 8px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"><img src="assets/logo.png" alt="SelfEvolvingClaw Logo" width="140" /></span></td>
+    <td align="left"><h1 style="font-size: 2.5em; margin: 0;">SelfEvolvingClaw</h1></td>
+  </tr>
+  </table>
   <p align="center">Create missing capabilities during execution · No fixed skill set required · Keep getting stronger</p>
   <p align="center"><strong>+28% net worth · 13 validated skills · 10-day A/B verified</strong></p>
   <p align="center"><em>GDPVal 10-day A/B experiment: self-evolving agent achieves ~28% higher net worth on identical tasks, 13 validated skills, no preset skill set.</em></p>
   <p align="center">
-    <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B: Self-evolution vs baseline — net worth, income, per-task" width="800" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined_light.png">
+      <img src="experiments/ab_10d_evolution_funds/figures/showcase_ab_github_style_combined.png" alt="A/B: Self-evolution vs baseline — net worth, income, per-task" width="1000">
+    </picture>
   </p>
   <p align="center">
     <img src="https://img.shields.io/badge/python-≥3.10-blue?logo=python&logoColor=white" alt="Python" />
@@ -17,6 +22,7 @@
     <a href="README.md">English</a> | <a href="README_zh.md">中文</a>
   </p>
 </p>
+
 
 ---
 
@@ -80,7 +86,9 @@
 
 ## 🔄 How it works
 
-![Flowchart](assets/Flowchart.png)
+<p align="center">
+  <img src="assets/Flowchart.png" alt="Flowchart" width="1000">
+</p>
 
 **Closed loop**: Only skills that are actually used in Run2 and improve performance are persisted. No skill bloat.
 
