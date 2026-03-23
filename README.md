@@ -9,7 +9,7 @@
 <p>⚡️ Delivers 28% better overall performance than static skill agents.</p>
 
 <p align="center">
-  <img src="assets/image0.png" alt="CamoClaw: Chameleon with skills" width="600">
+  <img src="assets/image0.png" alt="CamoClaw: Chameleon with skills" width="450">
 </p>
 
 
