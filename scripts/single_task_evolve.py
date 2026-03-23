@@ -998,10 +998,13 @@ def run_evolution_for_task(
     run2_result = _extract_run_result(config2)
     used_names = _get_skill_content_called_names(config2.agent_path, date)
     promoted = []
+    # Promotion requires all three: (1) in candidates, (2) called in Run2, (3) result improved
     if not run2_result or run2_result.get("work_submitted") is not True:
         print(f"   [evolution] Run2 work_submitted=False or no result, skip promoting skills to main store")
     elif not used_names:
         print(f"   [evolution] Run2 submitted but used_names is empty (no get_skill_content in Run2 logs), skip promoting")
+    elif not _task_improved(run1_result, run2_result, threshold):
+        print(f"   [evolution] Run2 did not improve over Run1 (score/money), skip promoting skills to main store")
     else:
         promoted = _promote_used_candidates_to_formal(config2, used_names)
         if promoted:
