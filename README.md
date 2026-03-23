@@ -7,12 +7,9 @@
   <img src="https://img.shields.io/badge/dataset-GDPVal%20220%20tasks-6f42c1" alt="Dataset" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
 </p>
-🦎 CamoClaw: Expand task boundaries, accumulate domain skills during execution.
-
-
-⚡️ Delivers 28% better overall performance than static skill agents.
-
-📏 Reproducible: run <code>python camoclaw/main.py camoclaw/configs/default_config.json</code> to verify.
+<p>🦎 CamoClaw: Expand task boundaries, accumulate domain skills during execution.</p>
+<p>⚡️ Delivers 28% better overall performance than static skill agents.</p>
+<p>📏 Reproducible: run <code>python camoclaw/main.py camoclaw/configs/default_config.json</code> to verify.</p>
 
 <p align="center">
   <img src="assets/chameleon_with_skills_box.png" alt="CamoClaw: Chameleon with skills" width="900">

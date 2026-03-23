@@ -7,13 +7,9 @@
   <img src="https://img.shields.io/badge/dataset-GDPVal%20220%20tasks-6f42c1" alt="Dataset" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
 </p>
-🦎 CamoClaw：拓展任务边界，在执行中沉淀领域技能。
-
-
-⚡️ 相较静态技能库 Agent，CamoClaw 综合表现提升 28%。
-
-
-📏 可复现：运行 <code>python camoclaw/main.py camoclaw/configs/default_config.json</code> 即可验证。
+<p>🦎 CamoClaw：拓展任务边界，在执行中沉淀领域技能。</p>
+<p>⚡️ 相较静态技能库 Agent，CamoClaw 综合表现提升 28%。</p>
+<p>📏 可复现：运行 <code>python camoclaw/main.py camoclaw/configs/default_config.json</code> 即可验证。</p>
 
 <p align="center">
   <img src="assets/chameleon_with_skills_box.png" alt="CamoClaw：变色龙与技能" width="900">
