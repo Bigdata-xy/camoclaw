@@ -8,10 +8,10 @@
 </p>
 <p>🦎 CamoClaw：拓展任务边界，在执行中沉淀领域技能。</p>
 <p>⚡️ 相较静态技能库 Agent，CamoClaw 综合表现提升 28%。</p>
-
 <p align="center">
-  <img src="assets/image-0.png" alt="CamoClaw：变色龙与技能" width="1800">
+  <img src="assets/image0.png" alt="CamoClaw：变色龙与技能" width="800">
 </p>
+
 
   <p align="center">
     <a href="README.md">English</a> | <a href="README_zh.md">中文</a>
