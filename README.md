@@ -35,7 +35,7 @@
 
 📦 **Closed-Loop Skill Persistence**: Only skills actually used in Run2 with measurable improvement are written to `skills.jsonl`. No skill bloat.
 
-📊 **End-to-End Workflow**: Task Assignment → Execution → Artifact Creation → LLM Evaluation → Payment — a complete professional pipeline.
+📊 **End-to-End Workflow**: Task Assignment → Execution → Artifact Creation → LLM Evaluation → Payment — a complete professional pipeline .
 
 ⚖️ **Sector-Aware LLM Evaluation**: Category-specific rubrics per sector — ensuring assessment matches real professional standards.
 
